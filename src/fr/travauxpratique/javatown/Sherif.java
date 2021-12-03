@@ -1,12 +1,22 @@
 package fr.travauxpratique.javatown;
 
-public class Sherif extends CowBoy{
+public class Sherif extends CowBoy implements Hors_la_Loi{
 
     private int nbBrigandsCoffres;
 
     public Sherif(String nom) {
         super(nom);
         this.nbBrigandsCoffres = 0;
+    }
+
+    @Override
+    public void coffrer(CowBoy cowboy) {
+
+    }
+
+    @Override
+    public int getOffreRecompense() {
+        return 0;
     }
 
     @Override

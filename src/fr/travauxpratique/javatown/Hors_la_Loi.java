@@ -3,11 +3,14 @@ package fr.travauxpratique.javatown;
 public interface Hors_la_Loi {
 
 
-    public void coffrer(CowBoy cowboy);
+    void coffrer(CowBoy cowboy);
 
-    public void kidnapper(Dame dame);
+    default void kidnapper(Dame dame){
+        System.out.println("Ah ah ! "+dame.quel_est_ton_nom()+", tu es mienne désormais !");
+        dame.seFaireEnlever();
+    }
 
-    public int getOffreRecompense();
+    int getOffreRecompense();
 
-    public String quel_est_ton_nom();
+    String quel_est_ton_nom();
 }

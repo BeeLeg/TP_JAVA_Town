@@ -1,6 +1,6 @@
 package fr.travauxpratique.javatown;
 
-public class Brigand extends Humain{
+public class Brigand extends Humain implements Hors_la_Loi, VisagePale{
 
     public String look;
     private int nbDamesEnelevees;
@@ -32,6 +32,11 @@ public class Brigand extends Humain{
         if(this.nbDamesEnelevees > 1)
             System.out.println("J'ai l'air méchant et j'ai déjà kidnappé "+this.nbDamesEnelevees+" dames !");
         System.out.println("Ma tête est mise à prix pour "+this.offreRecompense+" !");
+    }
+
+    @Override
+    public void coffrer(CowBoy cowboy) {
+
     }
 
     public void kidnapper(Dame dame){

@@ -1,6 +1,6 @@
 package fr.travauxpratique.javatown;
 
-public class CowBoy extends Humain{
+public class CowBoy extends Humain implements VisagePale{
 
     public int popularite;
     public String rang;
@@ -15,10 +15,11 @@ public class CowBoy extends Humain{
         return popularite;
     }
 
-    public void tirer(Brigand brigand){
-        System.out.println(super.quel_est_ton_nom()+" le "+this.rang+" tire sur "+brigand.quel_est_ton_nom()+".");
+    public void tirer(Hors_la_Loi hll){
+        System.out.println(super.quel_est_ton_nom()+" le "+this.rang+" tire sur "+hll.quel_est_ton_nom()+".");
         System.out.println("PAN ! Prend ça mécréant !");
-        brigand.estEmprisonner(super.quel_est_ton_nom());
+        if(hll instanceof Brigand)
+            ((Brigand)hll).estEmprisonner(super.quel_est_ton_nom());
     }
 
     public void liberer(Dame dame){

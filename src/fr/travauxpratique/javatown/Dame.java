@@ -1,6 +1,6 @@
 package fr.travauxpratique.javatown;
 
-public class Dame extends Humain{
+public class Dame extends Humain implements VisagePale{
 
     private String couleurRobe;
     private boolean etat; // true = libre, false = captive

@@ -11,19 +11,34 @@ public class Main {
         Humain barman1 = new Barman("Arthus", "Vin");
         Humain barman2 = new Barman("Blyat", "СУКА БЛЯТЬ");
         Humain sherif = new Sherif("Danton");
+        Humain indien = new Indien("Coco l'asticot");
+
+        Hors_la_Loi ripou = new Ripoux("Alphou");
+        Hors_la_Loi femme_brigand = new Femme_Brigand("Calamity", "Rouge");
+
+        Hors_la_Loi peon = (Hors_la_Loi) sherif;
 
         CowBoy Clint = new Sherif("Clint");
+
+
 
         //Clint.sePresenter();
         //((Sherif)Clint).coffrer((Brigand)brigand1);
 
+        System.out.println(ripou.quel_est_ton_nom());
+        ripou.kidnapper((Dame)dame2);
+
+        System.out.println(femme_brigand.quel_est_ton_nom());
+        ((Dame)femme_brigand).sePresenter();
+        femme_brigand.kidnapper((Dame)dame1);
+
         System.out.println("#############################################################");
         System.out.println("Brigand:");
-        ((Brigand)brigand1).sePresenter();
-        ((Brigand)brigand1).kidnapper((Dame)dame1);
+        ((Brigand)brigand2).sePresenter();
+        peon.kidnapper((Dame)dame1);
         System.out.println("Cowboy:");
         cowboy1.sePresenter();
-        ((CowBoy)cowboy1).tirer((Brigand)brigand1);
+        ((CowBoy)cowboy1).tirer(peon);
         System.out.println("Cowboy");
         ((CowBoy)cowboy1).liberer((Dame)dame1);
 
