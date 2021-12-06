@@ -11,8 +11,8 @@ public class Indien extends Humain{
         this.totem = "Coyote";
     }
 
-    public void scalp(Humain humain){
-
+    public void scalper(Humain humain){
+        ((Humain)humain).scalp();
         this.nbPlumes++;
     }
 }

@@ -20,6 +20,8 @@ public class Main {
 
         CowBoy Clint = new Sherif("Clint");
 
+        ((Indien)indien).scalper(brigand1);
+
 
 
         //Clint.sePresenter();

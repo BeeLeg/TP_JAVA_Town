@@ -1,6 +1,6 @@
 package fr.travauxpratique.javatown;
 
-public class Humain{
+public class Humain implements VisagePale{
     private String nom;
     private String boissonFavorite;
 
